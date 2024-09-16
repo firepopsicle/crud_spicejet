@@ -8,13 +8,13 @@ body {
 }
 
 h1 {
-    color: #cc0000; /* SpiceJet red */
+    color: #cc0000; 
     text-align: center;
     margin-top: 20px;
 }
 
 a {
-    color: #cc0000; /* SpiceJet red */
+    color: #cc0000; 
     text-decoration: none;
 }
 
@@ -59,7 +59,7 @@ th, td {
 }
 
 th {
-    background-color: #cc0000; /* SpiceJet red */
+    background-color: #cc0000;
     color: #fff;
 }
 
@@ -85,7 +85,7 @@ input[type="email"] {
 }
 
 input[type="submit"] {
-    background-color: #cc0000; /* SpiceJet red */
+    background-color: #cc0000; 
     color: #fff;
     border: none;
     padding: 10px 20px;
@@ -96,12 +96,12 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #a30000; /* Darker red */
+    background-color: #a30000; 
     transform: scale(1.05);
 }
 
 input[type="submit"]:active {
-    background-color: #900000; /* Even darker red */
+    background-color: #900000;
 }
 
 .actions {
@@ -116,7 +116,7 @@ input[type="submit"]:active {
 }
 
 .actions a:hover {
-    color: #a30000; /* Darker red */
+    color: #a30000; 
 }
 
 .table-container {
