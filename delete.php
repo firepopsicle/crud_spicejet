@@ -3,7 +3,7 @@ include 'config.php';
 
 $id = $_GET['id'];
 
-// Delete the user record
+
 $sql = "DELETE FROM users WHERE id=$id";
 
 if ($conn->query($sql) === TRUE) {
