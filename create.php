@@ -6,26 +6,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $phone = $_POST['phone'];
 
-    // Check if there is a recycled ID
+
     $sql = "SELECT id FROM recycled_ids ORDER BY id ASC LIMIT 1";
     $result = $conn->query($sql);
     
     if ($result->num_rows > 0) {
-        // Reuse recycled ID
+
         $row = $result->fetch_assoc();
         $id = $row['id'];
 
-        // Remove the recycled ID from the table
+
         $sql = "DELETE FROM recycled_ids WHERE id = $id";
         $conn->query($sql);
     } else {
-        // No recycled ID, use the next auto-increment ID
+
         $sql = "INSERT INTO users (name, email, phone) VALUES ('$name', '$email', '$phone')";
         $conn->query($sql);
         $id = $conn->insert_id;
     }
 
-    // Insert the new user with the recycled ID
+
     $sql = "INSERT INTO users (id, name, email, phone) VALUES ($id, '$name', '$email', '$phone')";
     
     if ($conn->query($sql) === TRUE) {
